@@ -1,0 +1,879 @@
+@font-face {
+  font-family: "Mark Pro bold";
+  src: url("/fonts/FontFont_FF.Mark.Pro.Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mark Pro Heavy";
+  src: url("/fonts/FontFont_FF.Mark.Pro.Heavy.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Mark Pro Regular";
+  src: url("/fonts/FontFont_FF.Mark.Pro.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* ====== font variable ====== */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.overlay {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.active {
+  font-family: "Mark Pro bold", sans-serif;
+  border-bottom: 4px solid black;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: black !important;
+  font-family: "Mark Pro bold", sans-serif;
+}
+
+ul li {
+  padding-right: 42px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: black;
+  font-family: "Mark Pro Regular";
+  font-size: 20px;
+}
+
+.navbar {
+  padding-top: 3.4rem;
+}
+
+.navbar-nav {
+  -webkit-transform: translate(80px, -7px);
+          transform: translate(80px, -7px);
+}
+
+form img {
+  -webkit-transform: translate(33px, -8px);
+          transform: translate(33px, -8px);
+}
+
+.navbar-brand img {
+  -webkit-transform: translate(-44px, 23px);
+          transform: translate(-44px, 23px);
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.banner_part {
+  height: 700px;
+  position: relative;
+  overflow: hidden;
+  background-image: url(/image/bg-header.png);
+  background-repeat: no-repeat;
+  background-size: content;
+  background-position: left top;
+  margin-top: 1.6rem;
+  background-size: contain;
+  left: -1.7rem;
+  top: 2.48rem;
+}
+
+.banner_part::after {
+  content: '';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: url(/image/baners.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 571px;
+  width: 1234px;
+  margin-left: 3.5rem;
+  position: absolute;
+  bottom: 4rem;
+}
+
+.banner_part h1 {
+  -webkit-transform: translate(105px, 322px);
+          transform: translate(105px, 322px);
+  color: white;
+  position: absolute;
+  z-index: 99;
+  font-family: "Mark Pro Heavy";
+  font-size: 6em;
+}
+
+.header-nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 1.4rem;
+}
+
+.header-nav-item .titre-page a {
+  text-decoration: none !important;
+  color: white !important;
+  text-transform: uppercase;
+  font-family: "Mark Pro bold", sans-serif;
+  margin-left: 3.7rem;
+  font-size: 1em;
+  letter-spacing: 4px;
+}
+
+.header-nav-item .titre-page a::before {
+  content: "//";
+  font-family: "Mark Pro bold", sans-serif;
+  letter-spacing: 6px;
+  font-size: 13px;
+}
+
+.header-nav-item .sprache-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-nav-item .sprache-item li:not(:last-child):after {
+  content: "/";
+  font-family: "Mark Pro bold", sans-serif;
+  font-size: 14px;
+  -webkit-transform: translate(45px, -22px);
+          transform: translate(45px, -22px);
+  display: block;
+}
+
+.header-nav-item .sprache-item li a {
+  font-size: 1em;
+  color: black;
+  font-family: "Mark Pro bold", sans-serif;
+  padding-right: 18px;
+  -webkit-transform: translateX(14px);
+          transform: translateX(14px);
+  display: block;
+  letter-spacing: 2px;
+}
+
+.header-nav-item .sprache-item li {
+  list-style: none;
+  padding-right: 0 !important;
+}
+
+.skandinav-block {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.skandinav-block h2 {
+  font-family: "Mark Pro bold", sans-serif;
+  padding-top: 3.7rem;
+  font-size: 1.56em;
+  line-height: 1.4;
+}
+
+.skandinav-block > div {
+  padding-top: 1.58rem;
+  font-family: "Mark Pro Regular";
+  font-size: 1.525em;
+  width: 1020px;
+  margin-bottom: 4.8rem;
+  line-height: 1.4;
+}
+
+hr {
+  width: 1294px !important;
+  margin: 0 auto !important;
+}
+
+hr:not([size]) {
+  height: 2px !important;
+}
+
+.block-danemark {
+  margin-top: 6rem;
+  margin-bottom: 5rem;
+}
+
+.block-danemark h3 {
+  font-family: "Mark Pro bold", sans-serif;
+  font-size: 2.8em;
+  padding-bottom: 2rem;
+  margin-right: 4rem;
+  -webkit-transform: translate(-24px, 6px);
+  transform: translate(-24px, 6px);
+}
+
+.block-danemark h6 {
+  font-family: "Mark Pro bold", sans-serif;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+  line-height: 1.4;
+  -webkit-transform: translateX(-21px);
+          transform: translateX(-21px);
+}
+
+.block-danemark h6::before {
+  content: "//";
+  font-size: 0.8em;
+  letter-spacing: 4px;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  display: inline-block;
+}
+
+.block-danemark p {
+  font-family: "Mark Pro Regular";
+  font-size: 1.1em;
+  width: 606px;
+  padding-bottom: 1rem;
+  /* margin-right: -3rem; */
+  -webkit-transform: translateX(-23px);
+          transform: translateX(-23px);
+  line-height: 1.4;
+}
+
+.block-danemark a {
+  color: black !important;
+  font-family: "Mark Pro bold", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.11px;
+  font-size: 1.04em;
+  -webkit-transform: translateX(-23px);
+          transform: translateX(-23px);
+  display: inline-block;
+}
+
+.block-danemark a::after {
+  content: url(../image/icon-sub.png);
+}
+
+.block-danemark img {
+  width: 506px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 481px;
+  -webkit-transform: translate(-64px, -12px);
+          transform: translate(-64px, -12px);
+}
+
+.block-danemark .leistunge {
+  margin-top: 6rem;
+}
+
+.block-danemark .leistunge img {
+  -webkit-transform: translate(-2px, -12px);
+          transform: translate(-2px, -12px);
+}
+
+.block-danemark .leistunge h6 {
+  -webkit-transform: translateX(139px);
+          transform: translateX(139px);
+}
+
+.block-danemark .leistunge h3 {
+  -webkit-transform: translate(135px, 6px);
+          transform: translate(135px, 6px);
+}
+
+.block-danemark .leistunge p {
+  -webkit-transform: translateX(135px);
+          transform: translateX(135px);
+}
+
+.block-danemark .leistunge a {
+  -webkit-transform: translateX(137px);
+          transform: translateX(137px);
+}
+
+.block-invertoren {
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+}
+
+.block-invertoren .grid {
+  text-align: center;
+  width: 400px;
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+}
+
+.block-invertoren h2 {
+  font-family: "Mark Pro bold", sans-serif;
+  padding-bottom: 3.5rem;
+  font-size: 2.07em;
+}
+
+.block-invertoren span {
+  color: #558fa0;
+  font-family: "Mark Pro bold", sans-serif;
+  font-size: 4em;
+}
+
+.block-invertoren h6 {
+  font-size: 1.09em;
+  font-family: "Mark Pro bold", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding-bottom: 1rem;
+}
+
+.block-invertoren p {
+  font-size: 1.1em;
+  width: 300px;
+  text-align: center;
+  margin: 0 auto;
+  font-family: "Mark Pro Regular";
+  padding-bottom: 2.8rem;
+}
+
+.block-invertoren a {
+  font-family: "Mark Pro bold", sans-serif;
+  color: black;
+  text-transform: uppercase;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+.block-invertoren a::after {
+  content: url(../image/icon-sub.png);
+}
+
+.block-cases {
+  padding-top: 5rem;
+  padding-bottom: 3.2rem;
+}
+
+.block-cases h6 {
+  font-family: "Mark Pro bold", sans-serif;
+  text-transform: uppercase;
+}
+
+.block-cases h6::before {
+  content: "//";
+  font-size: 0.8em;
+  letter-spacing: 4px;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  display: inline-block;
+}
+
+.block-cases h3 {
+  font-size: 2.8em;
+  -webkit-transform: translate(9px, 7px);
+          transform: translate(9px, 7px);
+  line-height: 1.2;
+  font-family: "Mark Pro bold", sans-serif;
+  margin-bottom: 2.4rem;
+}
+
+.block-cases p {
+  font-family: "Mark Pro bold", sans-serif;
+  font-size: 1.1em;
+  margin-bottom: 3.2rem;
+}
+
+.block-cases .grid-item {
+  text-align: center;
+  position: relative;
+  color: #fff;
+}
+
+.block-cases .grid-item img {
+  width: 400px;
+  height: 454px;
+}
+
+.block-cases .grid-item .content {
+  -webkit-transform: translateY(-406px);
+          transform: translateY(-406px);
+  background: rgba(85, 143, 160, 0.6);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  text-align: center;
+  padding-top: 45%;
+  -webkit-transform: perspective(400px) rotateX(-90deg);
+          transform: perspective(400px) rotateX(-90deg);
+  -webkit-transform-origin: center top 0;
+          transform-origin: center top 0;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  opacity: 0;
+  text-align: left;
+}
+
+.block-cases .grid-item .content h3 {
+  font-family: "Mark Pro bold", sans-serif;
+  font-size: 2.1em;
+  line-height: 1.6;
+  -webkit-transform: translate(17px, 12px);
+          transform: translate(17px, 12px);
+  line-height: 1.2;
+}
+
+.block-cases .grid-item .content span {
+  text-transform: uppercase;
+  font-size: 0.86em;
+  font-family: "Mark Pro bold", sans-serif;
+  display: inline-block;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  -webkit-transform: translate(16px, 3px);
+          transform: translate(16px, 3px);
+}
+
+.block-cases .grid-item .content span::before {
+  content: "//";
+  font-size: 0.8em;
+  letter-spacing: 4px;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  display: inline-block;
+}
+
+.block-cases .grid-item .content p {
+  font-family: "Mark Pro Regular";
+  /* font-size: 1.18em; */
+  -webkit-transform: translate(17px, 10px);
+          transform: translate(17px, 10px);
+  line-height: 1.4;
+}
+
+.block-cases .grid-item .content .content-items {
+  -webkit-transform: translate(30px, -131px);
+          transform: translate(30px, -131px);
+  width: 300px;
+}
+
+.block-cases .grid-item:hover .content {
+  opacity: 1;
+  -webkit-transform: perspective(400px) rotateX(0deg);
+          transform: perspective(400px) rotateX(0deg);
+}
+
+.block-cases .grid {
+  max-width: 1300px;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (400px)[1];
+      grid-template-columns: repeat(1, 400px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-gap: 18px;
+}
+
+.block-cases .grid .grid-item {
+  width: 400px;
+  height: auto;
+}
+
+.block-cases a {
+  font-family: "Mark Pro bold", sans-serif;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.05em;
+  line-height: 1.2;
+  -webkit-transform: translate(-10px, 14px);
+          transform: translate(-10px, 14px);
+  display: inline-block;
+}
+
+.block-cases a::after {
+  content: url(../image/icon-sub.png);
+}
+
+.slide-container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.slide-container .glide__arrow--right {
+  right: -4em !important;
+  position: absolute;
+  display: block;
+  top: 54%;
+  width: 60px;
+  height: 47px;
+  z-index: 2;
+  padding: 9px 12px;
+  background-color: unset;
+  border: none;
+  border-radius: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-shadow: none;
+}
+
+.slide-container .glide__arrow--left {
+  left: -5em;
+  position: absolute;
+  display: block;
+  top: 54%;
+  width: 60px;
+  height: 47px;
+  z-index: 2;
+  padding: 9px 12px;
+  background-color: unset;
+  border: none;
+  border-radius: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-shadow: none;
+}
+
+.glide__track {
+  width: 1286px;
+}
+
+.glide__slide {
+  width: 400px;
+}
+
+.block-danemark-map {
+  background-color: #558fa0;
+  width: 100%;
+  height: 718px;
+}
+
+.block-danemark-map .flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.block-danemark-map .danemark-description {
+  -webkit-transform: translate(37px, 133px);
+          transform: translate(37px, 133px);
+}
+
+.block-danemark-map .danemark-description h2 {
+  font-family: "Mark Pro bold", sans-serif;
+  font-size: 2.8em;
+  padding-bottom: 1.5rem;
+  color: white;
+}
+
+.block-danemark-map .danemark-description .danemark-description-text {
+  width: 420px;
+  font-family: "Mark Pro Regular";
+  color: white;
+  font-size: 1.1em;
+}
+
+.block-danemark-map .danemark-description .danemark-description-text ul {
+  margin-top: 0.9rem;
+  margin-bottom: 2rem;
+  padding-left: 0;
+}
+
+.block-danemark-map .danemark-description .danemark-description-text ul li {
+  list-style: none;
+}
+
+.block-danemark-map .danemark-map img {
+  width: 854px;
+  -webkit-transform: translate(66px, -107px);
+  transform: translate(78px, -97px);
+  height: 878px;
+}
+
+.block-kontakt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 9rem;
+}
+
+.block-kontakt .block-kontakt-text {
+  -webkit-transform: translate(-32px, 6px);
+          transform: translate(-32px, 6px);
+}
+
+.block-kontakt h6 {
+  font-family: "Mark Pro bold", sans-serif;
+  font-size: 0.83em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  -webkit-transform: translate(0px, -7px);
+          transform: translate(0px, -7px);
+}
+
+.block-kontakt h6::before {
+  content: "//";
+  font-size: 0.8em;
+  letter-spacing: 6.8px;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  display: inline-block;
+}
+
+.block-kontakt h2 {
+  font-size: 2.8em;
+  font-family: "Mark Pro bold", sans-serif;
+}
+
+.block-kontakt .grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  grid-gap: 1rem;
+  margin-top: 9.7rem;
+  -webkit-transform: translate(10px, 10px);
+          transform: translate(10px, 10px);
+}
+
+.block-kontakt .grid-item {
+  text-align: center;
+  position: relative;
+}
+
+.block-kontakt img {
+  width: 291px;
+  height: 300px;
+}
+
+.block-kontakt .info-kontakt {
+  cursor: pointer;
+  cursor: pointer;
+  background: rgba(85, 143, 160, 0.6);
+  position: absolute;
+  width: 100%;
+  height: 10% 0;
+  height: 100%;
+  top: 0;
+  padding: 4.6rem 6rem 3rem 2.6rem;
+  -webkit-transform-origin: center top 0;
+  transform-origin: center top 0;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  text-align: left;
+  opacity: 0;
+  color: white;
+}
+
+.block-kontakt .info-kontakt:hover {
+  opacity: 1;
+}
+
+.block-kontakt .info-kontakt span {
+  font-size: 31px;
+  line-height: 1.2;
+}
+
+.block-kontakt .info-kontakt h5,
+.block-kontakt .info-kontakt p {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  letter-spacing: 3px;
+  margin-top: 1rem;
+}
+
+.block-footer {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #dedede;
+  height: 370px;
+}
+
+.block-footer .block-footer-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 3rem;
+  padding-bottom: 1.7rem;
+}
+
+.block-footer .block-footer-flex h6 {
+  font-family: "Mark Pro bold", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  letter-spacing: 2px;
+  margin-bottom: 1.85rem;
+}
+
+.block-footer .block-footer-flex h6::before {
+  content: "//";
+  font-size: 0.85em;
+  letter-spacing: 2.5px;
+  -webkit-transform: translate(-28px, 0px);
+  transform: translate(-6px, 1px);
+  display: inline-block;
+  line-height: 1.7;
+  font-family: "Mark Pro bold", sans-serif;
+}
+
+.block-footer .block-footer-flex .block-newsletter {
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
+}
+
+.block-footer .block-footer-flex .block-newsletter h6::before {
+  -webkit-transform: translate(1px, -1px);
+          transform: translate(1px, -1px);
+}
+
+.block-footer .block-footer-flex .block-newsletter p {
+  margin-bottom: 3rem;
+}
+
+.block-footer .block-footer-flex .block-Spies-Nordics {
+  -webkit-transform: translateX(-5px);
+          transform: translateX(-5px);
+}
+
+.block-footer .block-footer-flex .block-Rechtliches {
+  -webkit-transform: translate(-11px, 0px);
+          transform: translate(-11px, 0px);
+}
+
+.block-footer .block-footer-flex .block-Spies {
+  -webkit-transform: translateX(9px);
+          transform: translateX(9px);
+}
+
+.block-footer .block-footer-flex ul li {
+  list-style: none;
+  line-height: 1.7;
+}
+
+.block-footer .block-footer-flex ul li a {
+  font-size: 1em;
+  font-family: "Mark Pro Regular";
+}
+
+.block-footer .block-footer-flex ol,
+.block-footer .block-footer-flex ul {
+  padding-left: 0 !important;
+}
+
+.block-footer .block-footer-flex input {
+  -webkit-transform: translate(2px, -14px);
+  transform: translate(2px, -14px);
+  outline: none;
+  border: none;
+  width: 215px;
+  background: white;
+  text-align: left;
+  color: #141212;
+  -webkit-transform: translate(12px, -14px);
+  transform: translate(-1px, -14px);
+  font-size: 1em;
+  height: 45px;
+  padding-left: 1rem;
+}
+
+.block-footer .block-footer-flex button {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.block-footer .block-footer-flex form img {
+  -webkit-transform: translate(15px, -12px);
+          transform: translate(15px, -12px);
+  width: 17px;
+}
+
+.block-footer .footer p {
+  font-family: "Mark Pro bold", sans-serif;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  -webkit-transform: translate(33px, 36px);
+          transform: translate(33px, 36px);
+}
+
+.footer-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-flex a {
+  padding-right: 1.5rem;
+  font-size: 1em;
+  font-family: "Mark Pro Regular";
+  color: #232222;
+  text-decoration: none;
+}
+
+.footer-flex .social-items {
+  -webkit-transform: translate(-3px, 31px);
+          transform: translate(-3px, 31px);
+}
+
+/* ======== Danemark style =========== */
+.banner_danemark {
+  background-image: url(/image/leistunge.jpg);
+}
+
+.banner_danemark::after {
+  content: '';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: url(/image/baners.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 571px;
+  width: 1234px;
+  margin-left: 3.5rem;
+  position: absolute;
+  bottom: 4rem;
+}
+/*# sourceMappingURL=style copy.css.map */

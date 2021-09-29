@@ -1,0 +1,940 @@
+@font-face {
+    font-family: "Mark Pro bold";
+    src: url("/fonts/FontFont_FF.Mark.Pro.Bold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Mark Pro Heavy";
+    src: url("/fonts/FontFont_FF.Mark.Pro.Heavy.otf") format("opentype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Mark Pro Regular";
+    src: url("/fonts/FontFont_FF.Mark.Pro.otf") format("opentype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+
+/* ====== font variable ====== */
+$Mark-pro_bold: 'Mark Pro bold',
+sans-serif;
+$Mark-pro_heavy : 'Mark Pro Heavy';
+$Mark-pro_regular : 'Mark Pro Regular';
+$font-size :2.8em;
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.overlay {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+
+$opacity :0.4;
+
+a:hover {
+    text-decoration: none;
+
+}
+
+.active {
+    font-family: $Mark-pro_bold;
+    border-bottom: 4px solid black;
+    
+}
+.navbar-light .navbar-nav .nav-link {
+    color: black !important;
+    font-family: $Mark-pro_bold;
+}
+
+
+
+ul li {
+     padding-right: 42px;
+    & a {
+        text-decoration: none;
+        color: black;
+        font-family: $Mark-pro_regular;
+        font-size: 20px;
+       
+    }
+
+}
+
+.navbar {
+
+    padding-top: 3.4rem;
+
+}
+
+.navbar-nav {
+    transform: translate(80px, -7px);
+}
+
+form img {
+    transform: translate(33px, -8px);
+}
+
+
+.navbar-brand img {
+    transform: translate(-44px, 23px);
+    display: block;
+    object-fit: cover;
+}
+
+.banner_part {
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+    background-image: url(/image/bg-header.png);
+    background-repeat: no-repeat;
+    background-size: content;
+    background-position: left top;
+    margin-top: 1.6rem;
+    background-size: contain;
+    left: -1.7rem;
+    top: 2.48rem;
+
+    // opacity: $opacity;
+    &::after {
+        content: '';
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        background: url(/image/baners.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 571px;
+        width: 1234px;
+        margin-left: 3.5rem;
+        position: absolute;
+        bottom: 4rem;
+    }
+
+    & h1 {
+        transform: translate(105px, 322px);
+        color: white;
+        position: absolute;
+        z-index: 99;
+        font-family: "Mark Pro Heavy";
+        font-size: 6em;
+    }
+
+}
+
+.header-nav-item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+
+    .titre-page a {
+        text-decoration: none !important;
+        color: white !important;
+        text-transform: uppercase;
+        font-family: $Mark-pro_bold;
+        margin-left: 3.7rem;
+        font-size: 1em;
+        letter-spacing: 4px;
+
+        &::before {
+            content: "//";
+            font-family: "Mark Pro bold", sans-serif;
+            letter-spacing: 6px;
+            font-size: 13px;
+        }
+
+    }
+
+    .sprache-item {
+        display: flex;
+
+        & li:not(:last-child):after {
+            content: "/";
+            font-family: $Mark-pro_bold;
+            font-size: 14px;
+            transform: translate(45px, -22px);
+            display: block;
+        }
+
+        & li a {
+            font-size: 1em;
+            color: black;
+            font-family: "Mark Pro bold", sans-serif;
+            padding-right: 18px;
+            transform: translateX(14px);
+            display: block;
+            letter-spacing: 2px;
+        }
+
+        & li {
+            list-style: none;
+            padding-right: 0!important;
+        }
+
+    }
+
+}
+
+
+// first section 
+.skandinav-block {
+    width: 700px;
+    margin: 0 auto;
+
+    & h2 {
+        font-family: $Mark-pro_bold;
+        padding-top: 3.7rem;
+        font-size: 1.56em;
+        line-height: 1.4;
+
+
+    }
+
+    &>div {
+        padding-top: 1.58rem;
+        font-family: "Mark Pro Regular";
+        font-size: 1.525em;
+        width: 1020px;
+        margin-bottom: 4.8rem;
+        // color: red;
+        line-height: 1.4;
+
+    }
+
+}
+
+hr {
+    width: 1294px !important;
+    margin: 0 auto !important;
+
+}
+
+hr:not([size]) {
+    height: 2px !important;
+
+
+}
+
+// danemark 
+.block-danemark {
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+
+    & h3 {
+        // color: red;
+        font-family: $Mark-pro_bold;
+        font-size: 2.8em;
+        padding-bottom: 2rem;
+        margin-right: 4rem;
+        -webkit-transform: translate(-24px, 6px);
+        transform: translate(-24px, 6px);
+    }
+
+    & h6 {
+        // color: red;
+        font-family: $Mark-pro_bold;
+        font-size: 0.8em;
+        text-transform: uppercase;
+        letter-spacing: 1.8px;
+        line-height: 1.4;
+        transform: translateX(-21px);
+
+        &::before {
+            content: "//";
+            font-size: 0.8em;
+            letter-spacing: 4px;
+            transform: translateY(-2px);
+            display: inline-block;
+        }
+    }
+
+    & p {
+        font-family: $Mark-pro_regular;
+        font-size: 1.1em;
+        width: 606px;
+        padding-bottom: 1rem;
+        // color: red;
+        /* margin-right: -3rem; */
+        transform: translateX(-23px);
+        line-height: 1.4;
+    }
+
+    & a {
+        color: black !important;
+        font-family: $Mark-pro_bold;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.11px;
+        font-size: 1.04em;
+        transform: translateX(-23px);
+        display: inline-block;
+
+        &::after {
+            content: url(../image/icon-sub.png);
+        
+    
+           
+           
+
+        }
+
+    }
+
+    & img {
+        width: 506px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        height: 481px;
+        transform: translate(-64px, -12px);
+    }
+
+    // leistungen 
+    .leistunge {
+        margin-top: 6rem;
+
+        & img {
+            transform: translate(-2px, -12px);
+        }
+
+        & h6 {
+            transform: translateX(139px);
+        }
+
+        & h3 {
+            transform: translate(135px, 6px);
+        }
+
+        & p {
+            transform: translateX(135px);
+        }
+
+        & a {
+            transform: translateX(137px);
+        }
+
+    }
+}
+
+//block-invertoren
+.block-invertoren {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+
+    & .grid {
+        text-align: center;
+        width: 400px;
+        transform: translateX(10px);
+
+    }
+
+    & h2 {
+        font-family: $Mark-pro_bold;
+        padding-bottom: 3.5rem;
+        // color: red;
+        font-size: 2.07em;
+    }
+
+    & span {
+        color: #558fa0;
+        font-family: $Mark-pro_bold;
+        font-size: 4em;
+    }
+
+    & h6 {
+        font-size: 1.09em;
+        font-family: $Mark-pro_bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding-bottom: 1rem;
+        // color: red;
+    }
+
+    & p {
+
+        font-size: 1.1em;
+        // color: red;
+        width: 300px;
+        text-align: center;
+        margin: 0 auto;
+        font-family: $Mark-pro_regular;
+        padding-bottom: 2.8rem;
+
+
+    }
+
+    & a {
+        font-family: $Mark-pro_bold;
+        color: black;
+        text-transform: uppercase;
+        font-size: 1em;
+        text-decoration: none;
+        &::after {
+            content: url(../image/icon-sub.png);
+        
+    
+           
+           
+
+        }
+    }
+}
+
+//section 
+.block-cases {
+    padding-top: 5rem;
+    padding-bottom: 3.2rem;
+
+    & h6 {
+        font-family: $Mark-pro_bold;
+        text-transform: uppercase;
+        // color: red;
+
+        &::before {
+            content: "//";
+            font-size: 0.8em;
+            letter-spacing: 4px;
+            transform: translateY(-2px);
+            display: inline-block;
+        }
+
+    }
+
+    & h3 {
+        font-size: $font-size;
+        // color: red;
+        transform: translate(9px, 7px);
+        line-height: 1.2;
+        font-family: $Mark-pro_bold;
+        margin-bottom: 2.4rem;
+
+    }
+
+    & p {
+        font-family: $Mark-pro_bold;
+        font-size: 1.1em;
+        margin-bottom: 3.2rem;
+    }
+
+    .grid-item {
+        text-align: center;
+        position: relative;
+        color: #fff;
+
+        & img {
+            width: 400px;
+            height: 454px;
+        }
+
+        & .content {
+            transform: translateY(-406px);
+            background: rgba(85, 143, 160, 0.6);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            text-align: center;
+            padding-top: 45%;
+            transform: perspective(400px) rotateX(-90deg);
+            transform-origin: center top 0;
+            transition: all 0.5s ease 0s;
+            opacity: 0;
+
+            text-align: left;
+
+
+            & h3 {
+                font-family: "Mark Pro bold", sans-serif;
+                font-size: 2.1em;
+                line-height: 1.6;
+                transform: translate(17px, 12px);
+                line-height: 1.2;
+            }
+
+            & span {
+                text-transform: uppercase;
+                font-size: 0.86em;
+                font-family: "Mark Pro bold", sans-serif;
+                // color: red;
+                display: inline-block;
+                line-height: 1.2;
+                letter-spacing: 1px;
+                transform: translate(16px, 3px);
+
+                &::before {
+                    content: "//";
+                    font-size: 0.8em;
+                    letter-spacing: 4px;
+                    transform: translateY(-2px);
+                    display: inline-block;
+                }
+            }
+
+            & p {
+                font-family: "Mark Pro Regular";
+                /* font-size: 1.18em; */
+                // color: red;
+                transform: translate(17px, 10px);
+                line-height: 1.4;
+            }
+
+            & .content-items {
+                transform: translate(30px, -131px);
+                width: 300px;
+            }
+
+
+        }
+
+
+
+        &:hover .content {
+            opacity: 1;
+            transform: perspective(400px) rotateX(0deg);
+        }
+    }
+
+    & .grid {
+        max-width: 1300px;
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(1, 400px);
+        justify-content: center;
+        grid-gap: 18px;
+        // opacity: $opacity;
+
+        & .grid-item {
+            width: 400px;
+            height: auto;
+
+
+        }
+    }
+
+    & a {
+        font-family: "Mark Pro bold", sans-serif;
+        color: black;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 1.05em;
+        line-height: 1.2;
+        transform: translate(-10px, 14px);
+        display: inline-block;
+        &::after {
+            content: url(../image/icon-sub.png);
+        
+    
+           
+           
+
+        }
+    }
+
+}
+
+.slide-container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+
+    .glide__arrow--right {
+        right: -4em !important;
+        position: absolute;
+        display: block;
+        top: 54%;
+        width: 60px;
+        height: 47px;
+        z-index: 2;
+
+        padding: 9px 12px;
+        background-color: unset;
+        border: none;
+        border-radius: none;
+        box-shadow: none;
+        text-shadow: none;
+        
+    }
+
+
+
+    .glide__arrow--left {
+        left: -5em;
+        position: absolute;
+        display: block;
+        top: 54%;
+        width: 60px;
+        height: 47px;
+        z-index: 2;
+        padding: 9px 12px;
+        background-color: unset;
+        border: none;
+        border-radius: none;
+        box-shadow: none;
+        text-shadow: none;
+        
+    }
+}
+.glide__track {
+   width: 1286px;
+}
+
+.glide__slide {
+    width: 400px;
+}
+
+// block-danemark-map
+
+.block-danemark-map {
+    background-color: #558fa0;
+    width: 100%;
+    height: 718px;
+
+    & .flex-container {
+        display: flex;
+    }
+
+    & .danemark-description {
+        transform: translate(37px, 133px);
+
+        & h2 {
+            font-family: $Mark-pro_bold;
+            font-size: $font-size;
+            padding-bottom: 1.5rem;
+            color: white;
+        }
+
+        & .danemark-description-text {
+            width: 420px;
+            font-family: "Mark Pro Regular";
+            color:white;
+            font-size: 1.1em;
+         
+
+            & ul {
+                margin-top: 0.9rem;
+                margin-bottom: 2rem;
+                padding-left: 0;
+
+                & li {
+                    list-style: none;
+                }
+            }
+        }
+    }
+
+    & .danemark-map img {
+
+        width: 854px;
+        -webkit-transform: translate(66px, -107px);
+        transform: translate(78px, -97px);
+        height: 878px;
+    }
+
+}
+
+//block-kontakt
+.block-kontakt {
+    display: flex;
+    justify-content: center;
+    width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 9rem;
+
+
+    & .block-kontakt-text {
+        transform: translate(-32px, 6px)
+    }
+
+    & h6 {
+        font-family: $Mark-pro_bold;
+        font-size: 0.83em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        // color: red;
+        transform: translate(0px, -7px);
+
+        &::before {
+            content: "//";
+            font-size: 0.8em;
+            letter-spacing: 6.8px;
+            transform: translateY(-2px);
+            display: inline-block;
+
+        }
+    }
+
+    & h2 {
+        font-size: $font-size;
+        font-family: $Mark-pro_bold;
+        // color: red;
+    }
+
+
+
+
+    & .grid {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-line-pack: center;
+        align-content: center;
+        grid-gap: 1rem;
+        margin-top: 9.7rem;
+        transform: translate(10px, 10px);
+    }
+
+
+    & .grid-item {
+        text-align: center;
+        position: relative;
+       
+    }
+
+    & img {
+        width: 291px;
+        height: 300px;
+       
+
+    }
+
+    & .info-kontakt {
+        cursor: pointer;
+        cursor: pointer;
+        background: rgba(85, 143, 160, 0.6);
+        position: absolute;
+        width: 100%;
+        height: 10% 0;
+        height: 100%;
+        top: 0;
+        padding: 4.6rem 6rem 3rem 2.6rem;
+        -webkit-transform-origin: center top 0;
+        transform-origin: center top 0;
+        -webkit-transition: all 0.5s ease 0s;
+        transition: all 0.5s ease 0s;
+        text-align: left;
+        opacity: 0;
+        color: white;
+        &:hover{
+            opacity: 1;
+        }
+
+        & span {
+            font-size: 31px;
+            line-height: 1.2;
+        }
+
+        & h5,
+        p {
+            text-transform: uppercase;
+            font-size: 0.7em;
+            letter-spacing: 3px;
+            margin-top: 1rem;
+
+        }
+
+    }
+
+
+
+
+}
+
+// block-footer
+.block-footer {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #dedede;
+    height: 370px;
+  
+
+    .block-footer-flex {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 3rem;
+        padding-bottom: 1.7rem;
+
+        & h6 {
+            font-family: $Mark-pro_bold;
+            text-transform: uppercase;
+            font-size: 0.8em;
+            letter-spacing: 2px;
+            margin-bottom: 1.85rem;
+
+            &::before {
+                content: "//";
+                font-size: 0.85em;
+                letter-spacing: 2.5px;
+                -webkit-transform: translate(-28px, 0px);
+                transform: translate(-6px, 1px);
+                display: inline-block;
+                line-height: 1.7;
+                font-family: $Mark-pro_bold;
+            }
+        }
+
+        .block-newsletter {
+            transform: translateX(-20px);
+
+            & h6::before {
+                transform: translate(1px, -1px);
+            }
+
+            & p {
+                margin-bottom: 3rem;
+            }
+        }
+
+        & .block-Spies-Nordics {
+            transform: translateX(-5px);
+
+        }
+        & .block-Rechtliches {
+            transform: translate(-11px, 0px);
+        }
+
+        & .block-Spies {
+            transform: translateX(9px);
+    
+        }
+
+        & ul li {
+            list-style: none;
+            line-height: 1.7;
+
+            & a {
+                font-size: 1em;
+                font-family: $Mark-pro_regular;
+            }
+        }
+
+        ol,
+        ul {
+            padding-left: 0 !important;
+        }
+
+        input {
+
+            -webkit-transform: translate(2px, -14px);
+            transform: translate(2px, -14px);
+            outline: none;
+            border: none;
+            width: 215px;
+            background: white;
+            text-align: left;
+            color: #141212;
+            -webkit-transform: translate(12px, -14px);
+            transform: translate(-1px, -14px);
+            font-size: 1em;
+            height: 45px;
+            padding-left: 1rem;
+
+
+        }
+
+        button {
+            border: none;
+            outline: none;
+            background: none;
+        }
+
+        & form img {
+            transform: translate(15px, -12px);
+            width: 17px;
+        }
+
+
+    }
+    
+
+
+    .footer p {
+        font-family: $Mark-pro_bold;
+        font-size: 0.8em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transform: translate(33px, 36px);
+    }
+
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+
+    & a{
+        padding-right: 1.5rem;
+        font-size: 1em;
+        font-family: $Mark-pro_regular;
+        color: #232222;
+        text-decoration: none;
+    }
+   
+    .social-items {
+        transform: translate(-3px, 31px);
+    }
+}
+
+
+
+/* ======== Danemark style =========== */
+
+
+.banner_danemark {
+    
+    background-image: url(/image/leistunge.jpg);
+    
+
+    // opacity: $opacity;
+    &::after {
+        content: '';
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        background: url(/image/baners.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 571px;
+        width: 1234px;
+        margin-left: 3.5rem;
+        position: absolute;
+        bottom: 4rem;
+    }
+
+   
+
+}
+
+
+
+

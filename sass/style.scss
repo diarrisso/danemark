@@ -1,0 +1,2165 @@
+@font-face {
+    font-family: "Mark Pro bold";
+    src: url("/fonts/FontFont_FF.Mark.Pro.Bold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Mark Pro Heavy";
+    src: url("/fonts/FontFont_FF.Mark.Pro.Heavy.otf") format("opentype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Mark Pro Regular";
+    src: url("/fonts/FontFont_FF.Mark.Pro.otf") format("opentype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+
+/* ====== font variable ====== */
+$Mark-pro_bold: 'Mark Pro bold',
+sans-serif;
+$Mark-pro_heavy : 'Mark Pro Heavy';
+$Mark-pro_regular : 'Mark Pro Regular';
+$font-size :2.8em;
+$background-color : #558fa0;
+
+
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+$opacity :0.4;
+
+a:hover {
+    text-decoration: none;
+
+}
+
+.active {
+    font-family: $Mark-pro_bold;
+    border-bottom: 4px solid black;
+
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black !important;
+    font-family: $Mark-pro_bold;
+}
+
+
+
+ul li {
+    padding-right: 42px;
+
+    & a {
+        text-decoration: none;
+        color: black;
+        font-family: $Mark-pro_regular;
+        font-size: 20px;
+
+    }
+
+}
+
+.navbar {
+
+    padding-top: 3.4rem;
+
+}
+
+.navbar-nav {
+    transform: translate(80px, -7px);
+}
+
+form img {
+    transform: translate(33px, -8px);
+}
+
+
+.navbar-brand img {
+    transform: translate(-44px, 23px);
+    display: block;
+    object-fit: cover;
+}
+
+.banner_part {
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+    background-image: url(/image/bg-header.png);
+    background-repeat: no-repeat;
+    background-size: content;
+    background-position: left top;
+    margin-top: 1.6rem;
+    background-size: contain;
+    left: -1.7rem;
+    top: 2.48rem;
+
+    // opacity: $opacity;
+    &::after {
+        content: '';
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        background: url(/image/baners.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 571px;
+        width: 1234px;
+        margin-left: 3.5rem;
+        position: absolute;
+        bottom: 4rem;
+    }
+
+    & h1 {
+        transform: translate(105px, 322px);
+        color: white;
+        position: absolute;
+        z-index: 99;
+        font-family: "Mark Pro Heavy";
+        font-size: 6em;
+    }
+
+}
+
+.header-nav-item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+
+    .titre-page a {
+        text-decoration: none !important;
+        color: white !important;
+        text-transform: uppercase;
+        font-family: $Mark-pro_bold;
+        margin-left: 3.7rem;
+        font-size: 1em;
+        letter-spacing: 4px;
+
+        &::before {
+            content: "//";
+            font-family: "Mark Pro bold", sans-serif;
+            letter-spacing: 6px;
+            font-size: 13px;
+        }
+
+    }
+
+    .sprache-item {
+        display: flex;
+
+        & li:not(:last-child):after {
+            content: "/";
+            font-family: $Mark-pro_bold;
+            font-size: 14px;
+            transform: translate(45px, -22px);
+            display: block;
+        }
+
+        & li a {
+            font-size: 1em;
+            color: black;
+            font-family: "Mark Pro bold", sans-serif;
+            padding-right: 18px;
+            transform: translateX(14px);
+            display: block;
+            letter-spacing: 2px;
+        }
+
+        & li {
+            list-style: none;
+            padding-right: 0 !important;
+        }
+
+    }
+
+}
+
+
+// first section 
+.skandinav-block {
+    width: 700px;
+    margin: 0 auto;
+
+    & h2 {
+        font-family: $Mark-pro_bold;
+        padding-top: 3.7rem;
+        font-size: 1.56em;
+        line-height: 1.4;
+        white-space: nowrap;
+
+
+    }
+
+    &>div {
+        padding-top: 1.58rem;
+        font-family: "Mark Pro Regular";
+        font-size: 1.525em;
+        width: 1020px;
+        margin-bottom: 4.8rem;
+        // color: red;
+        line-height: 1.4;
+
+    }
+
+}
+
+hr {
+    width: 1294px !important;
+    margin: 0 auto !important;
+
+}
+
+hr:not([size]) {
+    height: 2px !important;
+
+
+}
+
+// danemark 
+.block-danemark {
+    margin-top: 6rem;
+    margin-bottom: 5rem;
+
+    & h3 {
+        // color: red;
+        font-family: $Mark-pro_bold;
+        font-size: 2.8em;
+        padding-bottom: 2rem;
+        margin-right: 4rem;
+        -webkit-transform: translate(-24px, 6px);
+        transform: translate(-24px, 6px);
+        white-space: nowrap;
+    }
+
+    & h6 {
+        // color: red;
+        font-family: $Mark-pro_bold;
+        font-size: 0.8em;
+        text-transform: uppercase;
+        letter-spacing: 1.8px;
+        line-height: 1.4;
+        transform: translateX(-21px);
+
+        &::before {
+            content: "//";
+            font-size: 0.8em;
+            letter-spacing: 4px;
+            transform: translateY(-2px);
+            display: inline-block;
+        }
+    }
+
+    & p {
+        font-family: $Mark-pro_regular;
+        font-size: 1.1em;
+        width: 606px;
+        padding-bottom: 1rem;
+        // color: red;
+        /* margin-right: -3rem; */
+        transform: translateX(-23px);
+        line-height: 1.4;
+    }
+
+    & a {
+        color: black !important;
+        font-family: $Mark-pro_bold;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.11px;
+        font-size: 1.04em;
+        transform: translateX(-23px);
+        display: inline-block;
+
+        &::after {
+            content: url(../image/icon-sub.png);
+
+
+
+
+
+        }
+
+    }
+
+    & img {
+        width: 506px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        height: 481px;
+        transform: translate(-64px, -12px);
+    }
+
+    // leistungen 
+    .leistunge {
+        margin-top: 6rem;
+
+        & img {
+            transform: translate(-2px, -12px);
+        }
+
+        & h6 {
+            transform: translateX(139px);
+        }
+
+        & h3 {
+            transform: translate(135px, 6px);
+        }
+
+        & p {
+            transform: translateX(135px);
+        }
+
+        & a {
+            transform: translateX(137px);
+        }
+
+    }
+}
+
+//block-invertoren
+.block-invertoren {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+
+    & .grid {
+        text-align: center;
+        width: 400px;
+        transform: translateX(10px);
+
+    }
+
+    & h2 {
+        font-family: $Mark-pro_bold;
+        padding-bottom: 3.5rem;
+        // color: red;
+        font-size: 2.07em;
+    }
+
+    & span {
+        color: #558fa0;
+        font-family: $Mark-pro_bold;
+        font-size: 4em;
+    }
+
+    & h6 {
+        font-size: 1.09em;
+        font-family: $Mark-pro_bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding-bottom: 1rem;
+        // color: red;
+    }
+
+    & p {
+
+        font-size: 1.1em;
+        // color: red;
+        width: 300px;
+        text-align: center;
+        margin: 0 auto;
+        font-family: $Mark-pro_regular;
+        padding-bottom: 2.8rem;
+
+
+    }
+
+    & a {
+        font-family: $Mark-pro_bold;
+        color: black;
+        text-transform: uppercase;
+        font-size: 1em;
+        text-decoration: none;
+
+        &::after {
+            content: url(../image/icon-sub.png);
+
+
+
+
+
+        }
+    }
+}
+
+//section 
+.block-cases {
+    padding-top: 5rem;
+    padding-bottom: 3.2rem;
+
+    & h6 {
+        font-family: $Mark-pro_bold;
+        text-transform: uppercase;
+        // color: red;
+
+        &::before {
+            content: "//";
+            font-size: 0.8em;
+            letter-spacing: 4px;
+            transform: translateY(-2px);
+            display: inline-block;
+        }
+
+    }
+
+    & h3 {
+        font-size: $font-size;
+        // color: red;
+        transform: translate(9px, 7px);
+        line-height: 1.2;
+        font-family: $Mark-pro_bold;
+        margin-bottom: 2.4rem;
+
+    }
+
+    & p {
+        font-family: $Mark-pro_bold;
+        font-size: 1.1em;
+        margin-bottom: 3.2rem;
+    }
+
+    .grid-item {
+        text-align: center;
+        position: relative;
+        color: #fff;
+
+        & img {
+            width: 400px;
+            height: 454px;
+        }
+
+        & .content {
+            transform: translateY(-406px);
+            background: rgba(85, 143, 160, 0.6);
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            text-align: center;
+            padding-top: 45%;
+            transform: perspective(400px) rotateX(-90deg);
+            transform-origin: center top 0;
+            transition: all 0.5s ease 0s;
+            opacity: 0;
+
+            text-align: left;
+
+
+            & h3 {
+                font-family: "Mark Pro bold", sans-serif;
+                font-size: 2.1em;
+                line-height: 1.6;
+                transform: translate(17px, 12px);
+                line-height: 1.2;
+            }
+
+            & span {
+                text-transform: uppercase;
+                font-size: 0.86em;
+                font-family: "Mark Pro bold", sans-serif;
+                // color: red;
+                display: inline-block;
+                line-height: 1.2;
+                letter-spacing: 1px;
+                transform: translate(16px, 3px);
+
+                &::before {
+                    content: "//";
+                    font-size: 0.8em;
+                    letter-spacing: 4px;
+                    transform: translateY(-2px);
+                    display: inline-block;
+                }
+            }
+
+            & p {
+                font-family: "Mark Pro Regular";
+                /* font-size: 1.18em; */
+                // color: red;
+                transform: translate(17px, 10px);
+                line-height: 1.4;
+            }
+
+            & .content-items {
+                transform: translate(30px, -131px);
+                width: 300px;
+            }
+
+
+        }
+
+
+
+        &:hover .content {
+            opacity: 1;
+            transform: perspective(400px) rotateX(0deg);
+        }
+    }
+
+    & .grid {
+        max-width: 1300px;
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(1, 400px);
+        justify-content: center;
+        grid-gap: 18px;
+        // opacity: $opacity;
+
+        & .grid-item {
+            width: 400px;
+            height: auto;
+
+
+        }
+    }
+
+    & a {
+        font-family: "Mark Pro bold", sans-serif;
+        color: black;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 1.05em;
+        line-height: 1.2;
+        transform: translate(-10px, 14px);
+        display: inline-block;
+
+        &::after {
+            content: url(../image/icon-sub.png);
+
+
+
+
+
+        }
+    }
+
+}
+
+.slide-container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+
+    .glide__arrow--right {
+        right: -4em;
+        position: absolute;
+        display: block;
+        top: 54%;
+        width: 60px;
+        height: 47px;
+        z-index: 2;
+        padding: 9px 12px;
+        background-color: unset;
+        border: none;
+        border-radius: none;
+        box-shadow: none;
+        text-shadow: none;
+    }
+
+    .glide__arrow--left {
+        left: -5em;
+        position: absolute;
+        display: block;
+        top: 54%;
+        width: 60px;
+        height: 47px;
+        z-index: 2;
+        padding: 9px 12px;
+        background-color: unset;
+        border: none;
+        border-radius: none;
+        box-shadow: none;
+        text-shadow: none;
+
+    }
+
+    .glide__track {
+        width: 1286px;
+    }
+
+    .glide__slide {
+        width: 400px;
+    }
+}
+
+
+
+// block-danemark-map
+
+.block-danemark-map {
+    background-color: #558fa0;
+    width: 100%;
+    height: 718px;
+
+    & .flex-container {
+        display: flex;
+    }
+
+    & .danemark-description {
+        transform: translate(37px, 133px);
+
+        & h2 {
+            font-family: $Mark-pro_bold;
+            font-size: $font-size;
+            padding-bottom: 1.5rem;
+            color: white;
+        }
+
+        & .danemark-description-text {
+            width: 420px;
+            font-family: "Mark Pro Regular";
+            color: white;
+            font-size: 1.1em;
+
+
+            & ul {
+                margin-top: 0.9rem;
+                margin-bottom: 2rem;
+                padding-left: 0;
+
+                & li {
+                    list-style: none;
+                }
+            }
+        }
+    }
+
+    & .danemark-map img {
+
+        width: 854px;
+        -webkit-transform: translate(66px, -107px);
+        transform: translate(78px, -97px);
+        height: 878px;
+    }
+
+}
+
+//block-kontakt
+.block-kontakt {
+    display: flex;
+    justify-content: center;
+    width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 9rem;
+
+
+    & .block-kontakt-text {
+        transform: translate(-32px, 6px)
+    }
+
+    & h6 {
+        font-family: $Mark-pro_bold;
+        font-size: 0.83em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        // color: red;
+        transform: translate(0px, -7px);
+
+        &::before {
+            content: "//";
+            font-size: 0.8em;
+            letter-spacing: 6.8px;
+            transform: translateY(-2px);
+            display: inline-block;
+
+        }
+    }
+
+    & h2 {
+        font-size: $font-size;
+        font-family: $Mark-pro_bold;
+        // color: red;
+    }
+
+
+
+
+    & .grid {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-line-pack: center;
+        align-content: center;
+        grid-gap: 1rem;
+        margin-top: 9.7rem;
+        transform: translate(10px, 10px);
+    }
+
+
+    & .grid-item {
+        text-align: center;
+        position: relative;
+
+    }
+
+    & img {
+        width: 300px;
+        height: 300px;
+
+
+    }
+
+    & .info-kontakt {
+        cursor: pointer;
+        cursor: pointer;
+        background: rgba(85, 143, 160, 0.6);
+        position: absolute;
+        width: 100%;
+        height: 10% 0;
+        height: 100%;
+        top: 0;
+        padding: 4.6rem 6rem 3rem 2.6rem;
+        -webkit-transform-origin: center top 0;
+        transform-origin: center top 0;
+        -webkit-transition: all 0.5s ease 0s;
+        transition: all 0.5s ease 0s;
+        text-align: left;
+        opacity: 0;
+        color: white;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        & span {
+            font-size: 31px;
+            line-height: 1.2;
+        }
+
+        & h5,
+        p {
+            text-transform: uppercase;
+            font-size: 0.7em;
+            letter-spacing: 3px;
+            margin-top: 1rem;
+
+        }
+
+    }
+
+
+
+
+}
+
+// block-footer
+.block-footer {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #dedede;
+    height: 370px;
+
+
+    .block-footer-flex {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 3rem;
+        padding-bottom: 1.7rem;
+
+        & h6 {
+            font-family: $Mark-pro_bold;
+            text-transform: uppercase;
+            font-size: 0.8em;
+            letter-spacing: 2px;
+            margin-bottom: 1.85rem;
+
+            &::before {
+                content: "//";
+                font-size: 0.85em;
+                letter-spacing: 2.5px;
+                -webkit-transform: translate(-28px, 0px);
+                transform: translate(-6px, 1px);
+                display: inline-block;
+                line-height: 1.7;
+                font-family: $Mark-pro_bold;
+            }
+        }
+
+        .block-newsletter {
+            transform: translateX(-20px);
+
+            & h6::before {
+                transform: translate(1px, -1px);
+            }
+
+            & p {
+                margin-bottom: 3rem;
+            }
+        }
+
+        & .block-Spies-Nordics {
+            transform: translateX(-5px);
+
+        }
+
+        & .block-Rechtliches {
+            transform: translate(-11px, 0px);
+        }
+
+        & .block-Spies {
+            transform: translateX(9px);
+
+        }
+
+        & ul li {
+            list-style: none;
+            line-height: 1.7;
+
+            & a {
+                font-size: 1em;
+                font-family: $Mark-pro_regular;
+            }
+        }
+
+        ol,
+        ul {
+            padding-left: 0 !important;
+        }
+
+        input {
+
+            -webkit-transform: translate(2px, -14px);
+            transform: translate(2px, -14px);
+            outline: none;
+            border: none;
+            width: 215px;
+            background: white;
+            text-align: left;
+            color: #141212;
+            -webkit-transform: translate(12px, -14px);
+            transform: translate(-1px, -14px);
+            font-size: 1em;
+            height: 45px;
+            padding-left: 1rem;
+
+
+        }
+
+        button {
+            border: none;
+            outline: none;
+            background: none;
+        }
+
+        & form img {
+            transform: translate(15px, -12px);
+            width: 17px;
+        }
+
+
+    }
+
+
+
+    .footer p {
+        font-family: $Mark-pro_bold;
+        font-size: 0.8em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transform: translate(33px, 36px);
+    }
+
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+
+    & a {
+        padding-right: 1.5rem;
+        font-size: 1em;
+        font-family: $Mark-pro_regular;
+        color: #232222;
+        text-decoration: none;
+    }
+
+    .social-items {
+        transform: translate(-3px, 31px);
+    }
+}
+
+
+
+/* ======== Danemark style =========== */
+
+.cls-1 {
+    width: 9px;
+}
+
+.banner_danemark {
+
+    background-image: url(/image/header-danemark.png);
+
+
+    // opacity: $opacity;
+    &::after {
+        content: '';
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        background: url(/image/banner-danemark.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 571px;
+        width: 1234px;
+        margin-left: 3.5rem;
+        position: absolute;
+        bottom: 4rem;
+    }
+
+
+
+}
+
+.block-club {
+    margin-bottom: 9rem;
+}
+
+
+.block-pluspunkte {
+    background-color: $background-color;
+    color: white;
+    font-family: $Mark-pro_bold;
+
+
+    & h3 {
+
+        transform: translate(1px, 0px) !important;
+        margin-bottom: 0 !important;
+        // margin-bottom: 2.4rem;
+
+    }
+
+
+    .top-flex {
+        display: flex;
+        align-items: center;
+        align-content: center;
+
+        & p {
+            font-size: 1.6em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
+            margin-top: 1.7rem;
+            margin-left: 4.1rem;
+            margin-bottom: 0 !important;
+
+        }
+
+        & img {
+            transform: translate(28px, 46px);
+            width: 151px;
+            height: 149px;
+        }
+
+
+    }
+
+    .border_bottom {
+        border-bottom: 1px solid;
+        margin-left: 14rem;
+        width: 1046px;
+        transform: translateY(-20px);
+
+
+
+    }
+
+    .bottom-flex {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 1.1rem;
+        margin-left: 7rem;
+
+        & P {
+            width: 364PX;
+            font-size: 1.5em;
+            line-height: 1.4;
+            transform: translate(56px, 22px);
+        }
+
+        & img {
+            margin-top: 1.2rem;
+            width: 559px;
+        }
+
+    }
+
+    .glide__slide {
+        width: 1300px;
+    }
+
+    .danemark-slide {
+        width: 1300px;
+        margin: 0 auto;
+        position: relative;
+
+    }
+
+    .glide__track {
+        width: 1300px;
+    }
+
+    .glide__arrow--right {
+        right: -3.5em;
+    }
+
+    .glide__arrow--left {
+        left: -3.4em;
+    }
+
+    .glide__arrow {
+
+        top: 23%;
+
+    }
+
+
+}
+
+
+// Marksanalyse 
+.block-Marksanalyse {
+    margin-bottom: -4.2rem;
+    overflow: hidden;
+}
+
+.bloc-text {
+    font-family: $Mark-pro_bold;
+    transform: translate(31px, 189px);
+
+
+    & h3 {
+        font-size: $font-size;
+        line-height: 1.4;
+    }
+
+    & h6 {
+        font-size: 0.7em;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+
+}
+
+.flex-mittele {
+    display: flex;
+    justify-content: center;
+
+    ol {
+        position: relative;
+        top: -6rem;
+    }
+
+    ol::before {
+        position: absolute;
+        top: 13rem;
+        left: 0;
+        bottom: -67px;
+        width: 1px;
+        background-color: gray;
+        content: '';
+        z-index: -1;
+        transform: translate(94px, 10px);
+        height: 102%;
+    }
+
+    li {
+        display: block;
+        padding-right: 20px;
+
+    }
+
+    & img {
+        width: 148px;
+        margin: 0 auto;
+        display: block;
+        position: relative;
+        // margin: 65px 0 194px -14px;
+        margin: 75px 0 190px -14px;
+        // margin: 35px 0 190px -14px;
+
+
+    }
+
+
+}
+
+.flex-mittele2 {
+
+    & ol {
+        top: -3rem;
+    }
+
+    ol::before {
+
+        height: 100%;
+        top: -22rem;
+    }
+
+    & img {
+        margin: -139px 0 329px -14px;
+    }
+}
+
+
+.block-text-right {
+    transform: translate(59em, 186rem) !important;
+
+}
+
+
+
+
+
+.step-number-flex {
+
+    position: relative;
+
+
+    & h5 {
+        font-family: $Mark-pro_bold;
+        font-size: 1.7em;
+        white-space: nowrap;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+
+
+    .block-01 {
+        position: absolute;
+        left: 50rem;
+        width: 410px;
+
+        &::before {
+            content: url(/image/01.png);
+
+            display: block;
+
+        }
+
+        &>div {
+            font-size: 1.1em;
+            font-family: "Mark Pro Regular";
+            width: 468px;
+
+        }
+    }
+
+    .block-02 {
+        position: absolute;
+        left: 2rem;
+
+        bottom: -52rem;
+
+        &::before {
+            content: url(/image/02.png);
+            transform: translateY(-37px);
+            margin-left: 17rem;
+
+        }
+
+        &>div {
+            font-size: 1.1em;
+            font-family: "Mark Pro Regular";
+            width: 468px;
+
+        }
+    }
+
+
+    .block-03 {
+        position: absolute;
+        left: 50rem;
+        width: 410px;
+        top: 42rem;
+
+        &::before {
+            content: url(/image/03.png);
+            transform: translateY(-37px);
+
+        }
+
+        &>div {
+            font-size: 1.1em;
+            font-family: "Mark Pro Regular";
+            width: 468px;
+
+        }
+    }
+
+    .block-04 {
+        position: absolute;
+        right: 53.7rem;
+        width: 410px;
+        bottom: -87rem;
+
+        &::before {
+            content: url(/image/04.png);
+            transform: translateY(-37px);
+            margin-left: 17rem;
+            width: 532px;
+
+        }
+
+        &>div {
+            font-size: 1.1em;
+            font-family: "Mark Pro Regular";
+            width: 468px;
+
+        }
+    }
+
+    .block-05 {
+        position: absolute;
+        left: 50rem;
+        width: 410px;
+        top: 85rem;
+
+        &::before {
+            content: url(/image/05.png);
+            transform: translateY(-37px);
+
+        }
+
+        & > div {
+            font-size: 1.1em;
+            font-family: "Mark Pro Regular";
+            width: 468px;
+
+        }
+    }
+
+    .block-06 {
+
+        position: absolute;
+        left: 2rem;
+        width: 410px;
+        top: -10.3rem;
+
+        &::before {
+            content: url(/image/06.png);
+            display: block;
+            transform: translateX(295px);
+        }
+        & > div {
+            font-size: 1.1em;
+            font-family: "Mark Pro Regular";
+            width: 468px;
+
+        }
+    }
+
+    .block-07 {
+        position: absolute;
+        left: 49.9rem;
+        bottom: -33rem;
+
+        &::before {
+            content: url(/image/07.png);
+            display: block;
+            transform: translate(16px, -3px);
+        }
+        & > div {
+            font-size: 1.1em;
+            font-family: "Mark Pro Regular";
+            width: 468px;
+
+        }
+
+    }
+
+    .block-08 {
+        position: absolute;
+        left: 2rem;
+        width: 410px;
+        top: 32rem;
+
+        &::before {
+            content: url(/image/08.png);
+            display: block;
+            transform: translate(304px, 5px);
+
+        }
+        & > div {
+            font-size: 1.1em;
+            font-family: "Mark Pro Regular";
+            width: 468px;
+
+        }
+    }
+
+    .block-09 {
+        position: absolute;
+        right: 5rem;
+        width: 410px;
+        bottom: -76.9rem;
+
+        &::before {
+            content: url(/image/09.png);
+            display: block;
+            transform: translate(11px, 2px);
+        }
+        & > div {
+            font-size: 1.1em;
+            font-family: "Mark Pro Regular";
+            width: 468px;
+
+        }
+    }
+
+    .block-10 {
+        position: absolute;
+        left: 2rem;
+        width: 410px;
+        top: 75rem;
+
+
+        &::before {
+            content: url(/image/10.png);
+            display: block;
+            transform: translate(325px, -10px);
+
+        }
+        & > div {
+            font-size: 1.1em;
+            font-family: "Mark Pro Regular";
+            width: 468px;
+
+        }
+    }
+}
+
+
+
+
+.wrapper-analyse {
+
+    .bloc-text {
+
+        transform: translate(934px, 29px);
+
+    }
+
+    & h6 {
+
+        margin-left: 5rem;
+    }
+
+
+
+
+}
+
+
+
+
+
+
+/*/==== Bg-club========*/
+.bg-club {
+    width: 100%;
+    background-image: url(/image/club-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 736px;
+    position: relative;
+    margin-top: 8.4rem;
+
+    .link-referenzen {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        & a {
+            display: inline-block;
+            font-size: 1em;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: $Mark-pro_bold;
+            background-color: $background-color;
+            padding: 1.3em 3.3em;
+            cursor: pointer;
+            color: white;
+            &::after{
+                content: url(/image/referenzen-after.png);
+            }
+
+
+
+        }
+    }
+}
+
+.hr-danrmark {
+    transform: translate(10px, 42px);
+    width: 1217px !important;
+}
+
+/* =========== fortsetzung-marktanalyse ============= */
+.fortsetzung-marktanalyse {
+    margin-bottom: -3.5rem;
+
+    .flex-mittele ol::before {
+        position: absolute;
+        top: 11rem;
+        left: 0;
+        bottom: -67px;
+        width: 1px;
+        background: gray;
+        content: '';
+        z-index: -1;
+        transform: translate(94px, 10px);
+        height: 95%;
+    }
+
+
+    .flex-mittele ol {
+
+        top: -10rem;
+    }
+
+    .bloc-text {
+
+        transform: translate(938px, 120px);
+
+    }
+
+    .flex-mittele ol::before {
+
+        top: -8rem;
+
+    }
+
+    .step-number-flex .block-01 {
+        top: -5rem;
+        left: 2rem;
+    }
+
+    .step-number-flex .block-01::before {
+        margin-left: 19rem;
+    }
+
+    .step-number-flex .block-02 {
+
+
+        left: 50rem;
+        bottom: -41.2rem;
+    }
+
+    .step-number-flex .block-02::before {
+
+        transform: none;
+        margin-left: 0;
+    }
+
+    .step-number-flex .block-03 {
+        left: 2rem;
+        top: 38rem;
+    }
+
+    .step-number-flex .block-03::before {
+        margin-left: 19rem;
+    }
+
+    .step-number-flex .block-04 {
+
+        right: 5rem;
+
+        bottom: -84rem;
+    }
+
+    .step-number-flex .block-04::before {
+        content: url(/image/04.png);
+        transform: none;
+        margin-left: 0
+    }
+
+    .step-number-flex .block-05 {
+        left: 2rem;
+        top: 81rem;
+    }
+
+    .step-number-flex .block-05::before {
+        content: url(/image/05.png);
+        margin-left: 19rem;
+        transform: none;
+    }
+}
+
+
+/* =============================== Leistungen ================================= */
+.banner-leistungen {
+    background-image: url(/image/leistungen-header.png);
+
+    &::after {
+        content: '';
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        background: url(/image/after-leistungen.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 571px;
+        width: 1234px;
+        margin-left: 3.5rem;
+        position: absolute;
+        bottom: 4rem;
+    }
+
+    h1 {
+
+        transform: translate(117px, 138px);
+        font-size: 6.2em;
+    }
+}
+
+
+.block-Markteintritt {
+    background-color: $background-color;
+    height: 739px;
+    color: white;
+
+    margin-top: 7rem;
+
+    margin-bottom: 8.5rem;
+
+    .flex-text-slide {
+        align-items: center;
+        align-content: center;
+        padding-top: 5rem;
+        display: flex;
+    }
+
+    h3 {
+
+        font-size: $font-size;
+        font-family: $Mark-pro_bold;
+        padding-bottom: 1.8rem;
+    }
+
+    h6 {
+        font-size: 0.7em;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-family: $Mark-pro_bold;
+        transform: translateY(-8px);
+    }
+
+    .items-text {
+        transform: translate(31px, 31px);
+
+        &>div {
+            width: 397px;
+            font-size: 1.1em;
+            line-height: 1.5;
+
+        }
+
+    }
+
+
+    .items-slide {
+        width: 830px;
+        transform: translate(168px, 66px);
+    }
+
+    .block-top {
+        display: flex;
+        justify-content: space-between;
+
+        & h5 {
+            text-transform: uppercase;
+            font-family: "Mark Pro bold", sans-serif;
+            font-size: 1.5em;
+            letter-spacing: 2px;
+            transform: translate(-345px, 233px);
+        }
+
+        img {
+            margin-left: 3rem;
+            margin-top: 9rem;
+            width: 136px;
+        }
+    }
+
+    .border_slide-leistungen {
+        border-bottom: 2px solid;
+        width: 636px;
+        margin: 0 auto;
+        transform: translate(-34px, -63px);
+    }
+
+
+
+
+    ol,
+    ul {
+        padding-left: 0;
+        transform: translate(39px, -23px);
+
+    }
+
+    li {
+        list-style: none;
+
+        & span {
+            font-size: 1.1em;
+            font-family: $Mark-pro_regular;
+        }
+
+
+        span:nth-of-type(1)::after {
+            content: "//";
+            font-family: $Mark-pro_bold;
+            font-size: 14px;
+            line-height: 1px;
+            display: inline-block;
+            letter-spacing: 2px;
+            margin-left: 0.4rem;
+            margin-right: 0.3rem;
+        }
+    }
+
+    .glide__bullets {
+
+        bottom: 24em;
+        transform: translateX(-55%);
+    }
+
+    .glide__bullet {
+        background-color: rgba(255, 255, 255, 0.5);
+        width: 9px;
+        height: 9px;
+        padding: 0;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        transition: all 300ms ease-in-out;
+        cursor: pointer;
+        line-height: 0;
+
+        margin: 0 0.25em;
+    }
+
+    .glide__track {
+        width: 830px;
+    }
+
+    .glide__arrow--right {
+        right: 4.2em;
+    }
+
+    .glide__arrow {
+
+        top: 59%;
+
+    }
+
+    .glide__arrow--left {
+        left: -2.9em;
+    }
+
+
+
+}
+
+
+
+// Block marktsanalyse
+.block-analyse {
+    margin-bottom: 2.3rem;
+}
+
+.flex-investment {
+    display: flex;
+    align-content: start;
+    justify-content: center;
+    padding-bottom: 5rem;
+
+
+    .flex-block-text {
+        transform: translate(30px, 10px);
+
+
+        &>div {
+            width: 82%;
+            font-size: 1.1em;
+            margin-bottom: 1.2rem;
+            line-height: 1.5;
+            font-weight: $Mark-pro_regular;
+        }
+    }
+
+    & h6 {
+        font-family: $Mark-pro_bold;
+        font-size: 0.8em;
+        text-transform: uppercase;
+        letter-spacing: 1.8px;
+        line-height: 1.4;
+        transform: translateX(4px);
+        margin-bottom: 1rem;
+
+    }
+
+    & h3 {
+
+        font-family: $Mark-pro_bold;
+        font-size: 2.8em;
+        padding-bottom: 1.5rem;
+        ;
+
+
+    }
+
+
+    ul li {
+        font-size: 1.2em;
+        line-height: 1.2;
+        list-style: none;
+    }
+
+    li span:nth-of-type(1) {
+        color: black !important;
+    }
+
+
+    ol,
+    ul {
+        padding-left: 0 !important;
+    }
+
+    li span:nth-of-type(1)::after {
+        content: "//";
+        font-family: $Mark-pro_bold;
+        font-size: 14px;
+        line-height: 1px;
+        display: inline-block;
+        letter-spacing: 2px;
+        color: black;
+    }
+
+
+    .color-0 {
+        color: black !important;
+        font-family: $Mark-pro_bold;
+    }
+
+
+
+    .flex-image {
+        position: relative;
+
+        &::before {
+            content: '';
+            background: url(/image/01.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 123px;
+            position: absolute;
+            z-index: 9999;
+            height: 100px;
+            right: 0;
+            left: -3.1rem;
+            top: 3rem;
+
+        }
+
+        & img {
+            width: 532px;
+            height: 480px;
+            -o-object-fit: cover;
+            object-fit: cover;
+
+
+
+
+        }
+
+
+    }
+
+
+
+
+
+
+}
+
+.flex-produkt {
+
+
+    .flex-block-text {
+        transform: translate(156px, 26px);
+    }
+
+    .flex-block-text>div {
+
+        margin-bottom: 2.7rem;
+
+    }
+
+    .flex-image img {
+        width: 502px;
+        height: 482px;
+        transform: translate(33px, 13px);
+
+    }
+
+    .flex-image::before {
+        background: url(/image/02.png);
+        left: 27.9rem;
+        top: 4rem;
+        width: 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+
+
+
+
+
+
+
+.flex-prozess {
+    margin-top: 1.1rem;
+
+    .flex-image::before {
+        content: '';
+        background: url(/image/03.png);
+        width: 100%;
+        background-repeat: no-repeat;
+
+    }
+}
+
+
+
+
+
+
+
+.flex-management {
+    margin-top: 1.2rem;
+
+    .flex-block-text {
+
+        transform: translate(127px, 10px);
+
+    }
+
+    .flex-block-text>div {
+
+
+        margin-bottom: 2.7rem;
+
+    }
+
+    .flex-image::before {
+        content: '';
+        background: url(/image/04.png);
+        left: 27.5rem;
+        width: 100%;
+        background-repeat: no-repeat;
+
+    }
+}
+
+
+.border__bottom {
+
+    border-bottom: 1px solid #00381c;
+    max-width: 1231px;
+    margin: 0 auto;
+}
+
+
+.leistungen-kontakt .grid {
+
+    margin-top: 6.8rem;
+
+}
+
+
+/* ============ Cases ==================== */
+.banner-cases {
+    background-image: url(/image/cases-bg.png);
+
+    &::after {
+        content: '';
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        background: url(/image/cases-after.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 571px;
+        width: 1234px;
+        margin-left: 3.5rem;
+        position: absolute;
+        bottom: 4rem;
+    }
+}
+
+
+// section bg-roxo
+
+.bg-roxo {
+    background: url(/image/case_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 1230px;
+    height: 468px;
+    position: relative;
+    margin: 0 auto;
+
+
+    & h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-family: $Mark-pro_bold;
+        font-size: $font-size;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+
+    }
+}
+
+.block-ferienresort {
+    margin-bottom: 4.2rem;
+
+
+}
+
+
+.roxo-banner {
+    margin-bottom: 7rem;
+}
+
+.case-map {
+    margin-top: 7rem;
+    margin-bottom: 11.3rem;
+    height: 858px;
+
+
+
+
+}
+
+.danemark-map {
+    overflow: hidden;
+}
+
+
+
+.flex-modernferien {
+    display: flex;
+    justify-content: space-between;
+
+
+    ul {
+        padding-left: 0 !important;
+        margin-bottom: 3rem;
+    }
+
+    li {
+        list-style: none;
+        font-family: $Mark-pro_regular !important;
+        display: flex !important;
+        margin-bottom: 22px;
+
+        & span {
+            font-size: 1.1em;
+            width: calc(100% - 122px);
+
+        }
+    }
+
+    li span:first-child {
+
+        width: 122px;
+    }
+
+    .bloc-text {
+        transform: none;
+        margin-left: 2rem;
+
+        & h3 {
+            margin-bottom: 1.9rem;
+        }
+
+        & h6 {
+            margin-bottom: 0;
+            transform: translateY(-7px);
+
+        }
+    }
+
+    a {
+        font-family: $Mark-pro_bold;
+        font-size: 1.24em;
+        letter-spacing: 0.7px;
+        line-height: 1, 4;
+        text-decoration: none;
+        color: rgb(15, 15, 15) !important;
+        position: relative;
+
+        &::after {
+            content: url(/image/icon-sub.png);
+            display: inline-block;
+            position: absolute;
+            top: -0.01rem;
+            left: 11.8rem;
+            height: 10px;
+            width: 5px;
+
+        }
+    }
+
+}
+
+
+.block-ferien-image {
+    margin-right: 2rem;
+}
+
+.grid-image {
+    display: grid;
+    grid-template-columns: repeat(2, 230px);
+    grid-gap: 1.5rem;
+
+    & img {
+        width: 230px;
+        height: 227px;
+        transform: translateY(-20px);
+    }
+}
+
+.border-case-bottom {
+    border-bottom: 1px solid #00381c;
+    max-width: 1231px;
+    margin: 0 auto;
+    margin-bottom: 5.1rem;
+}
+
+.cases-kontakt {
+    padding-bottom: 9rem !important;
+}
+
+.case-grid {
+    margin-top: 8rem !important;
+}
+
+
+.bg-club-nord {
+    background-image: url('/image/nord.jpg');
+
+}
+
+.bg-dannemare {
+    background-image: url(/image/dannemare-bg.jpg);
+
+}
+
+.bg-mom {
+    background-image: url(/image/mom-bg.jpg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//kontakt ==============
+.banner-kontakt {
+    background-image: url(/image/kontakt-sekew.png);
+
+    &::after {
+        content: '';
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        background: url(/image/kontakt-banner.jpg);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 571px;
+        width: 1234px;
+        margin-left: 3.5rem;
+        position: absolute;
+
+    }
+
+    h1 {
+        transform: translate(117px, 138px);
+
+
+    }
+}
+
+.wrapper-h2 h2 {
+    white-space: nowrap;
+}
+
+.wrapper-h2>div {
+    width: 951px;
+}
+
+.kontatk-grid {
+    margin-top: 10.8rem !important;
+}
+
+
+.overlay {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
